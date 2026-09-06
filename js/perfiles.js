@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalDirector = document.getElementById('modal-director');
         const modalSynopsis = document.getElementById('modal-synopsis');
         const modalQuote = document.getElementById('modal-quote');
+        const modalImage = document.getElementById('modal-image');
         const closeBtn = document.querySelector('.close-btn');
 
         const movieData = {
@@ -20,19 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "El Silencio de los Inocentes",
                 director: "Jonathan Demme",
                 synopsis: "Una joven cadete del FBI debe pedir ayuda a un asesino caníbal encarcelado para atrapar a otro asesino en serie que despelleja a sus víctimas.",
-                quote: '"Uno del censo intentó hacerme una encuesta. Me comí su hígado con unos cuantos frijoles y un excelente Chianti."'
+                quote: '"Uno del censo intentó hacerme una encuesta. Me comí su hígado con unos cuantos frijoles y un excelente Chianti."',
+                image: "img/pelis_o/silencio_inocentes.webp"
             },
             padrino: {
                 title: "El Padrino",
                 director: "Francis Ford Coppola",
                 synopsis: "El envejecido patriarca de una dinastía del crimen organizado en Nueva York transfiere el control de su imperio clandestino a su hijo, desencadenando traiciones y violencia.",
-                quote: '"Le haré una oferta que no podrá rechazar."'
+                quote: '"Le haré una oferta que no podrá rechazar."',
+                image: "img/pelis_o/el_padrino.webp"
             },
             alien: {
                 title: "Alien",
                 director: "Ridley Scott",
                 synopsis: "La tripulación de la nave espacial Nostromo es despertada de su sueño criogénico para investigar una transmisión desconocida proveniente de una luna desolada.",
-                quote: '"En el espacio, nadie puede oírte gritar."'
+                quote: '"En el espacio, nadie puede oírte gritar."',
+                image: "img/pelis_o/alien.webp"
             }
         };
 
@@ -47,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalDirector.textContent = data.director;
                     modalSynopsis.textContent = data.synopsis;
                     modalQuote.textContent = data.quote;
+                    
+                    if (data.image) {
+                        modalImage.src = data.image;
+                        modalImage.style.display = 'block';
+                    } else {
+                        modalImage.style.display = 'none';
+                    }
                     
                     // Mostrar modal
                     modal.classList.remove('modal-hidden');

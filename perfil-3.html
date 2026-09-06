@@ -9,7 +9,7 @@
 <body>
   <header class="site-header">
     <div class="container header-content">
-      <div class="site-title tech-font">DEV_TEAM</div>
+      <div class="site-title tech-font">200 - OK</div>
       <nav>
         <a href="index.html">← Volver al Inicio</a>
         <span style="margin: 0 10px; color: var(--slate-700);">|</span>
@@ -23,7 +23,7 @@
       
       <!-- Encabezado del Perfil -->
       <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 24px;">
-        <img src="img/avatares/Orlando.png" alt="Avatar" class="card-avatar" style="margin: 0;">
+        <img src="img//avatares/Orlando.png" alt="Avatar" class="card-avatar" style="margin: 0;">
         <div>
           <h1 style="color: var(--sky-blue);">Orlando Sposto</h1>
           <p class="tech-font" style="color: var(--text-muted);">Ciudad: San Miguel de Tucumán | Edad: 60 años<br>
@@ -59,10 +59,10 @@
         <!-- Discos (Lista ordenada) -->
         <section>
           <h2 style="border-bottom: 1px solid var(--slate-700); padding-bottom: 8px; margin-bottom: 15px;">Discos Favoritos</h2>
-          <ol style="padding-left: 20px; color: var(--text-muted);">
-            <li>Mozart: Requiem (Nikolaus Harnoncourt)</li>
-            <li>Screaming for Vengeance (Judas Priest)</li>
-            <li>Back in Black Live in River Plate Stadium (AC/DC)</li>
+          <ol style="padding-left: 20px; color: var(--text-muted); list-style: none;">
+            <li style="margin-bottom: 10px;"><img src="img/musica_o/mozart_requiem.webp" alt="Mozart Requiem" class="list-thumbnail"> Mozart: Requiem (Nikolaus Harnoncourt)</li>
+            <li style="margin-bottom: 10px;"><img src="img/musica_o/judas-priest.webp" alt="Screaming for Vengeance" class="list-thumbnail"> Screaming for Vengeance (Judas Priest)</li>
+            <li style="margin-bottom: 10px;"><img src="img/musica_o/ac_dc.webp" alt="Back in Black" class="list-thumbnail"> Back in Black Live in River Plate Stadium (AC/DC)</li>
           </ol>
         </section>
       </div>
@@ -73,10 +73,15 @@
         <div id="movieModal" class="modal-hidden">
           <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2 id="modal-title" style="color: var(--sky-blue); margin-bottom: 10px;">Título</h2>
-            <p><strong>Director:</strong> <span id="modal-director" class="tech-font"></span></p>
-            <p style="margin-top: 10px;"><strong>Sinopsis:</strong> <span id="modal-synopsis" style="color: var(--text-muted);"></span></p>
-            <blockquote id="modal-quote" style="margin-top: 15px; font-style: italic; border-left: 3px solid var(--emerald); padding-left: 10px; color: var(--text-muted);"></blockquote>
+            <div class="modal-body">
+              <img id="modal-image" src="" alt="Póster de la película" class="modal-poster" style="display: none;">
+              <div>
+                <h2 id="modal-title" style="color: var(--sky-blue); margin-bottom: 10px; margin-top: 0;">Título</h2>
+                <p><strong>Director:</strong> <span id="modal-director" class="tech-font"></span></p>
+                <p style="margin-top: 10px;"><strong>Sinopsis:</strong> <span id="modal-synopsis" style="color: var(--text-muted);"></span></p>
+                <blockquote id="modal-quote" style="margin-top: 15px; font-style: italic; border-left: 3px solid var(--emerald); padding-left: 10px; color: var(--text-muted);"></blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </div>

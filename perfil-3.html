@@ -49,10 +49,11 @@
         <section>
           <h2 style="border-bottom: 1px solid var(--slate-700); padding-bottom: 8px; margin-bottom: 15px;">Películas Favoritas</h2>
           <ol style="padding-left: 20px; color: var(--text-muted);">
-            <li>El Silencio de los Inocentes</li>
-            <li>El Padrino</li>
-            <li>Alien</li>
+            <li class="movie-item" data-movie="silencio" style="cursor: pointer; text-decoration: underline; margin-bottom: 8px;" title="Ver ficha técnica">El Silencio de los Inocentes</li>
+            <li class="movie-item" data-movie="padrino" style="cursor: pointer; text-decoration: underline; margin-bottom: 8px;" title="Ver ficha técnica">El Padrino</li>
+            <li class="movie-item" data-movie="alien" style="cursor: pointer; text-decoration: underline; margin-bottom: 8px;" title="Ver ficha técnica">Alien</li>
           </ol>
+          <p class="tech-font" style="font-size: 0.8rem; color: var(--sky-blue); margin-top: 10px;">* Haz clic en una película para ver su ficha técnica.</p>
         </section>
 
         <!-- Discos (Lista ordenada) -->
@@ -67,8 +68,17 @@
       </div>
 
       <!-- Zona para Interactividad JS requerida por cada integrante -->
-      <div id="zona-interactiva" style="margin-top: 30px; padding: 20px; border: 1px dashed var(--slate-700); border-radius: var(--radius-sm); width: 100%;">
-        <p class="tech-font" style="color: var(--emerald); text-align: center;">-- Componente Interactivo JS --</p>
+      <div id="zona-interactiva" style="margin-top: 30px; width: 100%;">
+        <!-- Modal (oculto por defecto) -->
+        <div id="movieModal" class="modal-hidden">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title" style="color: var(--sky-blue); margin-bottom: 10px;">Título</h2>
+            <p><strong>Director:</strong> <span id="modal-director" class="tech-font"></span></p>
+            <p style="margin-top: 10px;"><strong>Sinopsis:</strong> <span id="modal-synopsis" style="color: var(--text-muted);"></span></p>
+            <blockquote id="modal-quote" style="margin-top: 15px; font-style: italic; border-left: 3px solid var(--emerald); padding-left: 10px; color: var(--text-muted);"></blockquote>
+          </div>
+        </div>
       </div>
 
     </article>

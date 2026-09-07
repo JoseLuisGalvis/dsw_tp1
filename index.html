@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>200 - OK | Equipo de Desarrollo Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Preconnect y Google Fonts sugeridos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegación Principal -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <span class="tech-font brand-name">200 - OK</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="bitacora.html">Bitácora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección Hero -->
+  <main>
+    <section class="hero container">
+      <h1>Bienvenido a <span class="highlight">200 - OK</span></h1>
+      <p class="hero-subtitle">
+        Somos un equipo interdisciplinario apasionado por construir soluciones web rápidas, responsivas y accesibles. 
+        Transformamos código en experiencias de usuario excepcionales.
+      </p>
+      
+      <!-- Buscador dinámico (JS - Fase 2) -->
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar integrantes por habilidad (ej: HTML, DOMÓTICA, CSS)...">
+      </div>
+    </section>
+
+    <!-- Listado del Equipo -->
+    <section class="team-section container">
+      <h2 class="section-title">Nuestro Equipo</h2>
+      
+      <div class="team-grid" id="teamGrid">
+        
+        <!-- Tarjeta: Guillermo -->
+        <article class="team-card">
+          <div class="card-image">
+            <img src="https://ui-avatars.com/api/?name=Guillermo+Escobar&background=0284c7&color=fff" alt="Avatar de Guillermo Escobar">
+          </div>
+          <div class="card-info">
+            <h3>Guillermo Escobar</h3>
+            <p class="role tech-font">Desarrollador Web Front-End</p>
+            <div class="skills" data-skills="html css javascript">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="perfil-1.html" class="btn">Ver Perfil Completa &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta: José Luis -->
+        <article class="team-card">
+          <div class="card-image">
+            <img src="https://ui-avatars.com/api/?name=Jose+Luis+Galviz&background=34d399&color=fff" alt="Avatar de José Luis Galviz">
+          </div>
+          <div class="card-info">
+            <h3>José Luis Galviz</h3>
+            <p class="role tech-font">Desarrollador Web Front-End</p>
+            <div class="skills" data-skills="html css javascript">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="perfil-2.html" class="btn">Ver Perfil Completa &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta: Orlando -->
+        <article class="team-card">
+          <div class="card-image">
+            <img src="img/osposto/foto_perfil.webp" alt="Avatar de Orlando Sposto">
+          </div>
+          <div class="card-info">
+            <h3>Orlando Sposto</h3>
+            <p class="role tech-font">Desarrollador Web / IoT</p>
+            <div class="skills" data-skills="domotica iot programacion instalaciones">
+              <span class="skill-badge">Domótica</span>
+              <span class="skill-badge">IoT</span>
+              <span class="skill-badge">Programación</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="perfil-3.html" class="btn">Ver Perfil Completa &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta: Adriana -->
+        <article class="team-card">
+          <div class="card-image">
+            <img src="https://ui-avatars.com/api/?name=Adriana+Van+Den+Dooren&background=8b5cf6&color=fff" alt="Avatar de Adriana Van Den Dooren">
+          </div>
+          <div class="card-info">
+            <h3>Adriana Van Den Dooren</h3>
+            <p class="role tech-font">Desarrolladora Web Front-End</p>
+            <div class="skills" data-skills="html css javascript">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="perfil-4.html" class="btn">Ver Perfil Completa &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Equipo <strong>200 - OK</strong>. Proyecto TP1 - Desarrollo de Sistemas Web Front-End.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

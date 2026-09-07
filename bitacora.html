@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora de Desarrollo | 200 - OK</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegación Principal -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <span class="tech-font brand-name">200 - OK</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="bitacora.html" class="active">Bitácora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom: 60px;">
+    
+    <section class="hero">
+      <h1>Bitácora del Proyecto</h1>
+      <p class="hero-subtitle">
+        Registro cronológico de decisiones de diseño, problemas técnicos y soluciones aplicadas durante el desarrollo del TP1.
+      </p>
+    </section>
+
+    <!-- Historial de Bitácora -->
+    <section style="display: flex; flex-direction: column; gap: 30px; max-width: 800px; margin: 0 auto;">
+
+      <!-- Entrada 1: Estructura y Navegación -->
+      <article class="profile-card">
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <h2 class="highlight" style="font-size: 1.5rem; margin: 0;">1. Estructura Base y Breakpoints</h2>
+          <span class="tech-font" style="color: var(--text-muted); font-size: 0.9rem;">Fecha: Inicio del Proyecto</span>
+        </div>
+        
+        <div style="color: var(--text-main); line-height: 1.7;">
+          <p style="margin-bottom: 15px;"><strong>Decisiones tomadas:</strong> Se optó por una reconstrucción completa ("desde cero") del repositorio para cumplir estrictamente con los requisitos de la rúbrica. Se diseñó un tema oscuro (Dark Theme) centralizado en un archivo <code>styles.css</code> y se implementó una barra de navegación persistente para evitar por completo el uso del botón "Atrás" del navegador.</p>
+          
+          <p style="margin-bottom: 15px;"><strong>Dificultades encontradas:</strong> Asegurar que la grilla del equipo se adaptara perfectamente sin desbordes a los 3 anchos de pantalla exigidos (400px, 900px y 1200px).</p>
+          
+          <p><strong>Soluciones aplicadas:</strong> Se utilizó CSS Grid nativo combinado con Media Queries (<code>@media min-width</code>) para reestructurar dinámicamente las columnas: 1 columna en móviles, 2 en tablets y 4 en pantallas de escritorio grandes.</p>
+        </div>
+      </article>
+
+      <!-- Entrada 2: Problemas de Imágenes y JavaScript -->
+      <article class="profile-card">
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <h2 class="highlight" style="font-size: 1.5rem; margin: 0;">2. Optimización de Imágenes e Interactividad JS</h2>
+          <span class="tech-font" style="color: var(--text-muted); font-size: 0.9rem;">Autor: Orlando Sposto</span>
+        </div>
+        
+        <div style="color: var(--text-main); line-height: 1.7;">
+          <p style="margin-bottom: 15px;"><strong>Decisiones tomadas:</strong> Integrar dos funciones dinámicas en JavaScript: un buscador en tiempo real en la portada que filtra por habilidades/nombre, y un modal interactivo en el perfil individual para visualizar pósters, sinopsis y datos de películas favoritas.</p>
+          
+          <p style="margin-bottom: 15px;"><strong>Dificultades encontradas:</strong> 
+          1) Diferentes dimensiones en las imágenes de pósters y portadas de discos rompían la asimetría visual.
+          2) Se experimentó un bucle infinito (infinite loop) en el navegador causado por una etiqueta <code>onerror</code> en una imagen local borrada, lo que bloqueaba la carga de la página.</p>
+          
+          <p><strong>Soluciones aplicadas:</strong> 
+          Para las imágenes, se implementó la propiedad CSS <code>object-fit: cover</code> con dimensiones fijas para recortes perfectos. Para el fallo del bucle, se reemplazaron temporalmente las imágenes rotas con la API externa de <code>ui-avatars.com</code> hasta que las fotos oficiales en formato optimizado <code>.webp</code> fueron re-subidas a la carpeta <code>img/</code>.</p>
+        </div>
+      </article>
+
+      <!-- Entrada 3: Trabajo en Equipo (Placeholder) -->
+      <article class="profile-card" style="border-style: dashed; opacity: 0.8;">
+        <div style="border-bottom: 1px dashed var(--border-color); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <h2 style="color: var(--text-muted); font-size: 1.5rem; margin: 0;">3. Integración de Perfiles del Equipo</h2>
+          <span class="tech-font" style="background: var(--border-color); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem;">Próximamente</span>
+        </div>
+        
+        <div style="color: var(--text-muted); line-height: 1.7;">
+          <p><strong>Próximos pasos:</strong> Guillermo, José Luis y Adriana clonarán el repositorio e implementarán sus tarjetas individuales basándose en <code>plantilla-perfil.html</code>. Este espacio se actualizará con sus decisiones de diseño y las implementaciones de sus respectivos componentes dinámicos en JavaScript.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Equipo <strong>200 - OK</strong>. Proyecto TP1 - Desarrollo de Sistemas Web Front-End.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
